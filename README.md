@@ -38,6 +38,8 @@ graph TD
 
 ## ⚙️ Setup Instructions
 
+> **New to LaTeX on Windows?** Check out my complete beginner's guide: [How to set up LaTeX on Windows with VSCode](https://medium.com/@chandukasireddy02/how-to-set-up-latex-on-windows-with-vscode-a-complete-beginners-guide-2eeca6b4e3b7)
+
 To use this framework with your own AI coding agent (like Claude, Gemini, or ChatGPT within an IDE/Terminal setup), follow these steps:
 
 ### 1. Clone or Download this Template
