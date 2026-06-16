@@ -1,0 +1,116 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage[left=0.8in,right=0.8in,top=0.55in,bottom=0.75in]{geometry}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.32em}
+\pagestyle{empty}
+
+% Template-style fields
+\newcommand{\ApplicantName}{}
+\newcommand{\AddressIlineOne}{}
+\newcommand{\AddressIlineTwo}{}
+\newcommand{\AddressIIlineOne}{}
+\newcommand{\AddressIIlineTwo}{}
+\newcommand{\EmailField}{}
+\newcommand{\PhoneField}{}
+\newcommand{\CompanyName}{}
+\newcommand{\DateField}{}
+
+\renewcommand{\author}[1]{\gdef\ApplicantName{#1}}
+\newcommand{\ProvideAdress}[3]{%
+	\ifstrequal{#3}{I}{%
+		\gdef\AddressIlineOne{#1}\gdef\AddressIlineTwo{#2}%
+	}{%
+		\gdef\AddressIIlineOne{#1}\gdef\AddressIIlineTwo{#2}%
+	}%
+}
+\newcommand{\ProvideEmail}[1]{\gdef\EmailField{#1}}
+\newcommand{\ProvidePhone}[2]{\gdef\PhoneField{#1}}
+\newcommand{\ProvideName}[2]{\gdef\CompanyName{#1}}
+\renewcommand{\date}[2]{\gdef\DateField{#1}}
+
+\newcommand{\dotline}{\noindent\rule{\textwidth}{0.45pt}}
+\newcommand{\SignatureLine}[2]{
+	\vspace{0.8em}
+	#1\\[1.1em]
+	\noindent\rule{#2}{0.45pt}\\
+	\ApplicantName
+}
+
+\newlength{\HeaderLeftShift}
+\setlength{\HeaderLeftShift}{\dimexpr1in+\hoffset+\oddsidemargin\relax}
+\newlength{\HeaderTopShift}
+\setlength{\HeaderTopShift}{\dimexpr1in+\voffset+\topmargin+\headheight+\headsep\relax}
+
+\renewcommand{\maketitle}{
+\vspace*{\dimexpr-\HeaderTopShift-\fboxsep-1.0em\relax}
+\noindent\makebox[0pt][l]{\hspace*{-\HeaderLeftShift}\colorbox{gray!10}{%
+\parbox{\dimexpr\paperwidth-2\fboxsep\relax}{%
+\hspace*{\HeaderLeftShift}\parbox{\textwidth}{%
+\vspace*{\HeaderTopShift}
+\begin{center}
+{\fontsize{20}{24}\selectfont\bfseries \ApplicantName}\\[0.8em]
+\href{mailto:\EmailField}{\EmailField} \quad|\quad
+\href{https://www.linkedin.com/in/chandukasireddy/}{LinkedIn} \quad|\quad
+\PhoneField \quad|\quad
+\AddressIlineOne
+\\
+\AddressIlineTwo
+\end{center}
+
+\vspace{0.25em}
+}}}}
+\vspace{0.45em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Your information
+\author{Chandrakiran Reddy Kasireddy}
+\ProvideAdress{Berlin, Germany}{}{I}
+\ProvideEmail{chandukasireddy02@gmail.com}
+\ProvidePhone{+49 176 58483995}{I}
+
+% Company information
+\ProvideName{Hiring Manager}{I}
+\ProvideAdress{Accenture Center for Advanced AI}{Germany}{II}
+
+% Date
+\date{\today}{I}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\DateField
+
+\vspace{0.55em}
+\textbf{\CompanyName}\\
+\AddressIIlineOne\\
+\AddressIIlineTwo
+
+\vspace{0.65em}
+Dear Hiring Manager,
+
+I am writing to express my interest in the GenAI / Agentic AI Engineer position at Accenture's Center for Advanced AI. I am currently working as an AI Engineer at Robert Bosch, where I design and ship production-ready Agentic AI systems, including a multi-agent RAG solution built with LangChain and Agno that automated quality-assurance workflows in an enterprise PLM environment. Alongside my work, I am pursuing a Master's degree in Artificial Intelligence at Brandenburg University of Technology, Cottbus, which keeps me grounded in current research while I focus on building systems that deliver measurable client impact.
+
+What draws me to Accenture is the opportunity to industrialize GenAI at scale, collaborating across architects, developers, and data experts to take solutions from proof-of-concept to production on modern cloud platforms. In my current role I have owned the full delivery lifecycle of GenAI systems, from architecture and LLM orchestration with GPT, Gemini, and Llama through to versioned development, testing, and CI/CD integration, precisely the kind of clean, production-grade engineering practice the Center for Advanced AI values. I would welcome the opportunity to bring this combination of agentic AI depth and cloud-oriented engineering to your team and contribute to Accenture's growing suite of client-facing AI solutions.
+
+\vspace{2.0em}
+\begin{flushright}
+Kind Regards,\\[1.0em]
+{\fontsize{16}{22}\selectfont\textit{Chandrakiran Reddy}}\\[0.4em]
+%\ApplicantName
+\end{flushright}
+
+\vspace{0.2em}
+\textit{Attachment: CV}
+
+\end{document}
