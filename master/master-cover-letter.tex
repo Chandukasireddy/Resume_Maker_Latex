@@ -1,22 +1,120 @@
-% Master Cover Letter Template
-\documentclass{letter}
-\begin{document}
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage[left=0.8in,right=0.8in,top=0.55in,bottom=0.75in]{geometry}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
 
-\begin{letter}{
-    [Hiring Manager Name / Hiring Team]\\
-    [Company Name]\\
-    [Company Address]
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.32em}
+\pagestyle{empty}
+
+% Template-style fields
+\newcommand{\ApplicantName}{}
+\newcommand{\AddressIlineOne}{}
+\newcommand{\AddressIlineTwo}{}
+\newcommand{\AddressIIlineOne}{}
+\newcommand{\AddressIIlineTwo}{}
+\newcommand{\EmailField}{}
+\newcommand{\PhoneField}{}
+\newcommand{\CompanyName}{}
+\newcommand{\DateField}{}
+
+\renewcommand{\author}[1]{\gdef\ApplicantName{#1}}
+\newcommand{\ProvideAdress}[3]{%
+	\ifstrequal{#3}{I}{%
+		\gdef\AddressIlineOne{#1}\gdef\AddressIlineTwo{#2}%
+	}{%
+		\gdef\AddressIIlineOne{#1}\gdef\AddressIIlineTwo{#2}%
+	}%
+}
+\newcommand{\ProvideEmail}[1]{\gdef\EmailField{#1}}
+\newcommand{\ProvidePhone}[2]{\gdef\PhoneField{#1}}
+\newcommand{\ProvideName}[2]{\gdef\CompanyName{#1}}
+\renewcommand{\date}[2]{\gdef\DateField{#1}}
+
+\newcommand{\dotline}{\noindent\rule{\textwidth}{0.45pt}}
+\newcommand{\SignatureLine}[2]{
+	\vspace{0.8em}
+	#1\\[1.1em]
+	\noindent\rule{#2}{0.45pt}\\
+	\ApplicantName
 }
 
-\opening{Dear [Hiring Manager Name / Hiring Team],}
+\newlength{\HeaderLeftShift}
+\setlength{\HeaderLeftShift}{\dimexpr1in+\hoffset+\oddsidemargin\relax}
+\newlength{\HeaderTopShift}
+\setlength{\HeaderTopShift}{\dimexpr1in+\voffset+\topmargin+\headheight+\headsep\relax}
 
-[First paragraph: State the role you are applying for and provide a strong hook about why you are a great fit based on your background and the company's mission/product...]
+\renewcommand{\maketitle}{
+\vspace*{\dimexpr-\HeaderTopShift-\fboxsep-1.0em\relax}
+\noindent\makebox[0pt][l]{\hspace*{-\HeaderLeftShift}\colorbox{gray!10}{%
+\parbox{\dimexpr\paperwidth-2\fboxsep\relax}{%
+\hspace*{\HeaderLeftShift}\parbox{\textwidth}{%
+\vspace*{\HeaderTopShift}
+\begin{center}
+{\fontsize{20}{24}\selectfont\bfseries \ApplicantName}\\[0.8em]
+\href{mailto:\EmailField}{\EmailField} \quad|\quad
+\href{https://www.linkedin.com/in/chandukasireddy/}{LinkedIn} \quad|\quad
+\PhoneField \quad|\quad
+\AddressIlineOne
+\\
+\AddressIlineTwo
+\end{center}
 
-[Second paragraph: Highlight specific, measurable achievements from your past experience that directly align with the core responsibilities listed in the job description...]
+\vspace{0.25em}
+}}}}
+\vspace{0.45em}
+}
 
-\closing{Sincerely,}
-\vspace{1cm}
-[YOUR_FIRSTNAME] [YOUR_LASTNAME]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Your information
+\author{Chandrakiran Reddy Kasireddy}
+\ProvideAdress{Berlin, Germany}{}{I}
+\ProvideEmail{chandukasireddy02@gmail.com}
+\ProvidePhone{+49 176 58483995}{I}
 
-\end{letter}
+% Company information
+\ProvideName{Hiring Manager}{I}
+\ProvideAdress{AI Engineering Team}{Berlin, Germany}{II}
+
+% Date
+\date{\today}{I}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\DateField
+
+\vspace{0.55em}
+\textbf{\CompanyName}\\
+\AddressIIlineOne\\
+\AddressIIlineTwo
+
+\vspace{0.65em}
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the AI Engineer position. I am currently pursuing a Master's degree in Artificial Intelligence at Brandenburg University of Technology, Cottbus, and I offer hands-on experience developing production-oriented AI systems that improve quality, efficiency, and reliability.
+
+During my GenAI internship at Robert Bosch, I developed an agentic RAG solution for the PLM Windchill platform using LangChain and Agno. This solution helped automate quality-assurance workflows and reduced manual testing effort. I also implemented multi-model LLM agent workflows using GPT, Gemini, and Llama to support automated test-case generation.
+
+My background combines AI research depth with practical engineering execution. As the founder of Graspins, I delivered AI assistants and automation solutions for real-world user workflows. Earlier in my career, I developed business intelligence systems and data pipelines in enterprise environments, strengthening my ability to deliver robust solutions from design through deployment.
+
+I would welcome the opportunity to contribute this combination of research rigor and product-focused engineering to your team. Thank you for your time and consideration.
+
+\vspace{2.0em}
+\begin{flushright}
+Kind Regards,\\[1.0em]
+{\fontsize{16}{22}\selectfont\textit{Chandrakiran Reddy}}\\[0.4em]
+%\ApplicantName
+\end{flushright}
+
+\vspace{0.2em}
+\textit{Attachment: CV}
+
 \end{document}
