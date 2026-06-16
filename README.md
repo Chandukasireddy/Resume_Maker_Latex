@@ -10,6 +10,12 @@ After extensive research, testing numerous automation pipelines, and building mu
 
 This repository represents the **most efficient, fast, and reliable approach** to generating highly tailored, editable LaTeX resumes and cover letters. By providing strict boundaries and a single source of truth, an AI coding agent can autonomously manage your job application pipeline—maintaining formatting, tracking progress, and delivering precise customizations for every role.
 
+### ✨ The Best Part: Ultimate Freedom
+Unlike web-based AI resume builders, this framework is entirely local and file-based:
+- **No AI Model Lock-in:** Use the free tiers of any AI you want (Claude, Gemini, ChatGPT).
+- **IDE Agnostic:** Works perfectly in your familiar environment like Cursor, VSCode (with Copilot), AntiGravity, Kiro, etc. Swap IDEs anytime or run them simultaneously.
+- **Zero Token Limit Issues:** Because the agent navigates a structured file system, it only reads what it needs. No more bloated context windows or hitting token limits.
+
 ---
 
 ## 🏗️ Architecture & Workflow
