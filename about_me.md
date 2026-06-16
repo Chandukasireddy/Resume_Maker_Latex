@@ -1,13 +1,13 @@
 # About Me
 
-**Chandrakiran Reddy Kasireddy**
-Berlin, Germany
+**[Your Name]**
+[Your City, Country]
 
-- Mobile: +49 176 58483995
-- Email: chandukasireddy02@gmail.com
-- LinkedIn: [chandukasireddy](https://www.linkedin.com/in/chandukasireddy)
-Nationality : Indian
-Gender : Male
+- Mobile: [Your Phone Number]
+- Email: [Your Email]
+- LinkedIn: [[Your LinkedIn Username]]([Your LinkedIn URL])
+Nationality : [Your Nationality]
+Gender : [Your Gender]
 ---
 
 ## Summary
