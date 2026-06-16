@@ -1,10 +1,10 @@
-# 🚀 Agentic Resume Framework
+# Agentic Resume Framework
 
 <div align="center">
-  <img src="assets/framework_hero.png" alt="Agentic Resume Framework Pipeline" width="800">
+  <img src="assets/framework_hero.png?v=3" alt="Agentic Resume Framework Pipeline" width="800">
 </div>
 
-## 📖 The Story Behind the Framework
+## The Story Behind the Framework
 
 After extensive research, testing numerous automation pipelines, and building multiple custom tools from scratch, I developed this framework to solve the ultimate job seeker's bottleneck: **tailoring applications efficiently without sacrificing quality.**
 
