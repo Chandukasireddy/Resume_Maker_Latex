@@ -1,0 +1,289 @@
+﻿% DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+
+%----------------------------------------------------------------------------------------
+% FONT
+%----------------------------------------------------------------------------------------
+%\usepackage{fontspec}
+%\defaultfontfeatures{Ligatures=TeX}
+
+%----------------------------------------------------------------------------------------
+% PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{url}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{1.03}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[left=0.5in,right=0.5in,top=0.4in,bottom=0.4in]{geometry}
+
+\usepackage{tabularx}
+\usepackage[final]{microtype}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*,label=\textbullet,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+
+% centered version of X column type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+% custom section handling
+\usepackage{titlesec}
+\usepackage{multicol}
+\setlength{\columnsep}{18pt}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+
+\newcommand{\entryheader}[4]{%
+  \begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}X r@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabularx}%
+}
+
+\newenvironment{entrybullets}{%
+  \begin{minipage}[t]{0.77\textwidth}
+    \begin{itemize}[leftmargin=*,label=\textbullet,align=left]
+}{%
+    \end{itemize}
+  \end{minipage}
+}
+
+\fancypagestyle{secondpage}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+  \fancyfoot[R]{\tiny \today}
+}
+
+% CV section styling
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[
+  \vspace{-9pt}\rule{\linewidth}{1pt}\vspace{-3pt}
+]
+\titlespacing{\section}{0pt}{9pt}{3pt}
+
+% Portal-safe links (no active PDF annotations)
+\newcommand{\safehref}[2]{#2}
+\let\href\safehref
+
+% Social icons
+\usepackage{fontawesome5}
+\newcommand{\extlink}{\raisebox{0.2ex}{\scriptsize\faExternalLink*}}
+
+% Job listing environments
+\newenvironment{jobshort}[2]{%
+  \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill & #2 \\[3.75pt]
+  \end{tabularx}
+}{}
+
+\newenvironment{joblong}[2]{%
+  \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill & #2 \\[3.75pt]
+  \end{tabularx}
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt,label=--]
+}{%
+    \end{itemize}
+  \end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+% BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+% TITLE
+%----------------------------------------------------------------------------------------
+\begin{tabularx}{\linewidth}{@{}C@{}}
+  \Huge{Chandrakiran Reddy Kasireddy}\\[10pt]
+  
+    % Rule: Modify the role as per job discription. 
+  \large{AI Researcher \& UX Analyst}\\[3pt]
+
+
+  \href{mailto: chandukasireddy02@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} \ chandukasireddy02@gmail.com} \ $|$ \
+  \href{tel:+49 176 58483995}{\raisebox{-0.05\height}{\reflectbox{\faPhone}} \ +49 176 58483995} \ $|$ \
+  \href{https://www.linkedin.com/in/chandukasireddy/}{\raisebox{-0.05\height}{\faLinkedin} \ Linkedin} \ $|$ \
+  \href{https://chandu.graspins.com/}{\raisebox{-0.05\height}{\faLink} \ Portfolio}\\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+\section*{PROFILE}
+Master's student in AI and Werkstudent at Robert Bosch, researching Human-AI interaction and user perception of multi-agent systems. Skilled in qualitative and quantitative research methods, usability studies, and data analysis to understand how users experience AI in real-world contexts.
+
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section*{PROFESSIONAL EXPERIENCE}
+\entryheader{AI Engineer}{Jun 2025 -- Mar 2026}{Robert Bosch}{Stuttgart, Germany}
+\begin{entrybullets}
+  \item Investigated user interaction patterns with a multi-agent AI system, applying qualitative analysis to improve usability.
+  \item Collected and analyzed user feedback data using structured interviews and mixed-method evaluation approaches.
+  \item Documented scientific results from AI user studies, contributing to internal UX research reports on agentic AI tools.
+\end{entrybullets}
+
+\vspace{0.25cm}
+\entryheader{Founder}{Jan 2024 -- Sep 2024}{Graspins Pvt Ltd}{Hyderabad, India}
+\begin{entrybullets}
+  \item Designed and evaluated AI-driven tools, gathering qualitative user feedback to refine Human-AI interaction quality.
+  \item Applied interview-based and observational methods to understand user needs, shaping chatbot UX for diverse clients.
+\end{entrybullets}
+
+\vspace{0.25cm}
+\entryheader{Associate Engineer}{Aug 2023 -- Dec 2023}{I K Technologies}{Hyderabad, India}
+\begin{entrybullets}
+  \item Conducted quantitative data analysis on operational datasets to generate actionable insights for decision-making.
+  \item Prepared structured reports and visualizations, supporting evidence-based conclusions in cross-functional settings.
+\end{entrybullets}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\section*{EDUCATION}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \textbf{Brandenburg University of Technology} & \textbf{Oct 2024 -- Present} \\
+  \textit{Masters in Artificial Intelligence} & \textit{Cottbus, Germany} \\
+\end{tabularx}
+
+\vspace{0.25cm}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \textbf{Guru Nanak Institutions Technical Campus} & \textbf{Nov 2020 -- May 2024} \\
+  \textit{Bachelors in CSE -- Artificial Intelligence and Machine Learning} & \textit{Hyderabad, India} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% POSITION OF RESPONSIBILITIES
+%----------------------------------------------------------------------------------------
+\section*{POSITION OF RESPONSIBILITIES}
+\entryheader{Prasidium Das Studierendenparlament (StuPa)}{Jul 2025 -- Present}{Brandenburgische Technische Universit"at Cottbus-Senftenberg}{}
+\begin{entrybullets}
+  \item Represent the legislative body to university stakeholders and manage all protocols.
+  \item Oversee operations and dispute resolution while safeguarding parliamentary rights.
+\end{entrybullets}
+
+\vspace{0.25cm}
+\entryheader{Chair Person}{Oct 2023 -- Aug 2024}{IEEE Student Branch}{}
+\begin{entrybullets}
+  \item Established a strong research community at GNI, leading to a 40\% rise in student-led research projects and supporting 50+ paper publications.
+  \item Launched and led technical societies, engaging 100+ professional and student members and organizing 10+ technical workshops.
+\end{entrybullets}
+
+\vspace{0.25cm}
+\newpage
+\thispagestyle{secondpage}
+
+\entryheader{Community Lead \ \extlink}{Jul 2022 -- Aug 2023}{Google DSC}{}
+\begin{entrybullets}
+  \item Led a 3000+ member tech community, organizing workshops, hackathons, and mentorship programs in web development, AI, blockchain, and cloud computing (GCP), fostering innovation, industry collaboration, and career growth.
+\end{entrybullets}
+
+\vspace{0.25cm}
+\entryheader{Founder \ | \ Community Manager \ \extlink}{Mar 2022 -- Dec 2023}{Feliks Club}{}
+\begin{entrybullets}
+  \item Founded and managed a dynamic team of 25 individuals, organizing 30+ events including hackathons, startup challenges, workshops, code jams, codethons, boot camps, and tech talks, fostering a culture of innovation and collaboration.
+\end{entrybullets}
+
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+\section*{SKILLS}
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X@{}}
+  \textbf{AI \& Machine Learning} & \textbf{Data Science \& Analytics} \\
+  Generative AI \& LLMs, Agentic AI, LangChain, Agno, LLM Fine-Tuning, Agentic RAG, Graph RAG, NLP, Computer Vision, Semantic Search, Embeddings &
+  SQL, Power BI, Data Visualization (Tableau, Matplotlib), Feature Engineering, Business Intelligence, Statistical Analysis \\
+  \\[-3pt]
+  \textbf{Cloud Technologies} & \textbf{Software Development \& Tools} \\
+  AWS, Google Cloud Platform, Oracle Database, Azure SQL Database, Compute \& Clusters, Firebase, DevOps &
+  Python, JavaScript, Node.js, Firebase, Git, Docker, CI/CD Pipelines, C++, Conda \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section*{PUBLICATIONS}
+\sloppy
+\noindent\textbf{\href{https://example.com}{Digital Emotions using Sentiment Analysis for Predictive Insights on Customer Recommendations\ \extlink}}\\
+\textit{IEEE 5th India Council International Subsections Conference (INDISCON) 2024}
+
+\vspace{0.2cm}
+\noindent\textbf{\href{https://example.com}{Statistical Deep Learning Enhancements for Automated Cell Counting using CNNs and Ensemble Methods\ \extlink}}\\
+\textit{International Journal of Science \& Engineering Development Research - IJSDR}
+\fussy
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+\section*{PROJECTS}
+\sloppy
+\noindent\textbf{\href{https://example.com}{Advanced Anomaly Detection in Meteorology Using k-NN and Autoencoders\ \extlink}}\\
+\textit{Statistical Deep Learning}
+\begin{itemize}
+  \item Developed models to detect unusual weather patterns using k-NN and autoencoders.
+  \item The models provide early warnings which help in better planning for weather-related disasters.
+\end{itemize}
+
+\vspace{0.15cm}
+\noindent\textbf{\href{https://example.com}{Low-Light Biopsy Image Enhancement\ \extlink}}\\
+\textit{Deep Learning}
+\begin{itemize}
+  \item Enhanced visibility and accuracy of biopsy images in challenging low-lighting conditions.
+  \item Utilized histogram equalization, computer vision, and filtering to improve quality and reduce noise.
+\end{itemize}
+\fussy
+
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section*{ACHIEVEMENTS}
+{\small
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X@{}}
+  \textbf{\href{https://example.com}{Google Cloud Digital Leader\ \extlink}} &
+  \textbf{\href{https://example.com}{IBM Data Science Coursera\ \extlink}} &
+  \textbf{\href{https://example.com}{Best Startup Pitch Award\ \extlink}} \\
+  Certifies understanding of Google Cloud core solutions &
+  Professional Certificate - 10 course series &
+  For findyourbelongings.com, a social cause portal at IITH \\
+  \\[-2pt]
+  \textbf{\href{https://example.com}{IJRTI Publication\ \extlink}} &
+  \textbf{\href{https://example.com}{EUNICE Challenge Winner\ \extlink}} &
+  \textbf{\href{https://example.com}{E-CELL IIT Bombay\ \extlink}} \\
+  Hybrid algorithms to optimize terrain feature extraction &
+  Optimized future workforce for Industrial Park Schwarze Pumpe &
+  Campus Ambassador for Entrepreneurship community \\
+\end{tabularx}
+}
+
+%----------------------------------------------------------------------------------------
+% LANGUAGES
+%----------------------------------------------------------------------------------------
+\section*{LANGUAGES}
+\begin{tabularx}{\textwidth}{@{}XXXX@{}}
+  \textbf{English} & \textbf{German} & \textbf{Hindi} & \textbf{Telugu} \\
+  Proficient & Basic & Fluent & Native \\
+\end{tabularx}
+
+\vfill
+%\center{\footnotesize Last updated: \today}
+\end{document}
