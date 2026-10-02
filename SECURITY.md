@@ -1,91 +1,33 @@
-# Contributing to Automated Resumes
+# Security & Privacy Policy
 
-First of all, thank you for your interest in contributing! 🎉
+## 🔒 Local-First Privacy Guarantee
 
-Our mission is to build the world's best open-source, automated LaTeX resume generator—transforming the tedious job application process into a streamlined, high-quality, AI-assisted experience.
+Your job applications contain sensitive Personally Identifiable Information (PII), including your full legal name, phone number, physical address, private email address, and complete career history.
 
-We are actively evolving this project into a **universal, installable agent skill** (installable via `npx` and global skill ecosystems), and we need the community's help to get there.
-
----
-
-## 🚀 Where We Need Help Most
-
-We are currently looking for contributors across four major pillars:
-
-### 1. 🎨 New LaTeX Resume & Cover Letter Templates
-We want to offer job seekers a rich collection of battle-tested, ATS-friendly, and visually distinct LaTeX templates:
-- **Styles**: Modern, Minimalist, Academic / CV, Two-Column, Executive, Creative, and Tech/Engineering.
-- **Requirements**:
-  - Must compile cleanly with standard compilers (`pdflatex`, `xelatex`, or `lualatex`).
-  - No obscure or deprecated packages.
-  - Well-commented sections that AI agents can easily parse and edit.
-  - Must use **placeholders only** (never commit personal contact info).
-
-### 2. ⚡ Turning This Framework into an Installable Global Skill
-We are turning this repository into a one-command, globally installable skill (e.g., via `npx` or agent skill distribution):
-- **Vision**: A user runs `npx automated-resumes init` or installs it as a global agent skill.
-- The AI agent will automatically:
-  - Scaffold category directories (`applications/full-time/...`, etc.).
-  - Set up `about_me.md` and `tracker.csv`.
-  - Let users select their preferred LaTeX template.
-  - Parse job descriptions and autonomously generate tailored resumes and cover letters.
-- **How to help**: If you have experience building CLI tools, npm/npx packages, or AI agent skills/sidecars, we'd love your architectural and coding contributions!
-
-### 3. 🤖 Agent Skills & Automation Enhancements
-- Expand skills under the `skills/` directory (e.g., resume tailoring skills, ATS scanner simulators, bullet-point polishers, cover letter customizers).
-- Automated LaTeX compilation test runners and GitHub Actions CI.
-- LaTeX syntax validators and error recovery workflows for agents.
-
-### 4. 📚 Documentation & Guides
-- Setup guides for different operating systems (Linux, macOS, Windows) and LaTeX distributions (TeX Live, MiKTeX, MacTeX).
-- Best practices for pairing with AI coding agents (AntiGravity, Cursor, Claude Code, VSCode Copilot).
+**The Agentic Resume Framework is designed with privacy as a foundational principle:**
+- **Zero External Telemetry:** This repository does not transmit, telemetry-log, or store your application data on any cloud servers or third-party databases.
+- **Local File System Execution:** All processing happens entirely within your local IDE/terminal and your chosen AI model provider.
+- **No Model Lock-in:** You choose the model and IDE (Cursor, Claude Code, Antigravity, Copilot), retaining full control over your AI provider's privacy agreements and data sharing policies.
 
 ---
 
-## 🛠️ Contribution Workflow
+## 🛡️ Best Practices for Users
 
-### 1. Find or Propose an Issue
-- Browse [open issues](https://github.com/Chandukasireddy/Resume_Maker_Latex/issues) to find something you'd like to work on.
-- If you have a new idea, feature request, or template, please open an issue or discussion first so we can align on the approach.
-
-### 2. Fork & Branch
-- Fork the repository to your own GitHub account.
-- Clone your fork locally:
-  ```bash
-  git clone https://github.com/<your-username>/Resume_Maker_Latex.git
-  ```
-- Create a focused branch with a descriptive name:
-  ```bash
-  git checkout -b feat/add-modern-two-column-template
-  # or
-  git checkout -b feat/npx-skill-scaffold
-  ```
-
-### 3. Making Changes
-- **No Personal Information**: Double-check that your commits do **not** contain personal phone numbers, emails, addresses, or private job notes. Always use generic placeholders (`John Doe`, `john.doe@example.com`, `+1 (555) 123-4567`).
-- **Test Compilations**: If submitting LaTeX files, verify they compile to PDF without fatal errors.
-
-### 4. Commit Guidelines
-We follow standard Conventional Commits:
-- `feat:` A new feature or template (e.g., `feat(templates): add modern minimalist resume template`)
-- `fix:` A bug fix or LaTeX compilation correction
-- `docs:` Documentation updates
-- `refactor:` Code or prompt refactoring without feature changes
-
-### 5. Submit a Pull Request
-- Push your branch to your fork:
-  ```bash
-  git push origin feat/your-feature-name
-  ```
-- Open a Pull Request against the `main` branch.
-- Fill out the PR template or describe:
-  - What was added/changed.
-  - If a template was added, include a screenshot or preview of the compiled PDF.
-  - Any relevant issue numbers (e.g., `Closes #4`).
+1. **Keep Your Repository Private:**
+   - If you push your custom `about_me.md`, `applications/`, or personalized `master-*.tex` files to GitHub, make sure your repository visibility is set to **Private**.
+2. **Never Commit Live PII into Public Forks:**
+   - If you submit pull requests or contribute templates, replace all real emails, phone numbers, and physical addresses with standard generic placeholders (`John Doe`, `jane.doe@example.com`, `+1 (555) 019-2834`).
+3. **Audit Generated Outputs:**
+   - Always review generated `.tex` files before compiling to ensure no unintended metadata or confidential company information from past employers is exposed.
 
 ---
 
-## 📜 Non-Commercial Commitment
+## 🚨 Reporting a Vulnerability
 
-This project is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). By contributing to this repository, you agree that your contributions will be shared openly under these non-commercial terms, ensuring the tools and templates remain free, accessible, and protected from commercial exploitation for all job seekers.
+If you discover a security vulnerability or sensitive data leak risk within this repository, please report it responsibly:
 
+- **Do NOT open a public GitHub issue.**
+- Email details of the vulnerability directly to the maintainer via GitHub profile contact or through private security advisories.
+- Include a clear description of the issue, affected files, and steps to reproduce.
+
+We take security and personal privacy seriously and will investigate and patch verified issues promptly.

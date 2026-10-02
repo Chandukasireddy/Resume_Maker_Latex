@@ -4,7 +4,7 @@ First of all, thank you for your interest in contributing! 🎉
 
 Our mission is to build the world's best open-source, automated LaTeX resume generator—transforming the tedious job application process into a streamlined, high-quality, AI-assisted experience.
 
-We are actively evolving this project into a **universal, installable agent skill** (installable via `npx` and global skill ecosystems), and we need the community's help to get there.
+We have evolved this framework into a **universal, installable agent skill** (installable via `npx skills add Chandukasireddy/Resume_Maker_Latex`), and we welcome community contributions to expand its capabilities.
 
 ---
 
@@ -21,20 +21,15 @@ We want to offer job seekers a rich collection of battle-tested, ATS-friendly, a
   - Well-commented sections that AI agents can easily parse and edit.
   - Must use **placeholders only** (never commit personal contact info).
 
-### 2. ⚡ Turning This Framework into an Installable Global Skill
-We are turning this repository into a one-command, globally installable skill (e.g., via `npx` or agent skill distribution):
-- **Vision**: A user runs `npx automated-resumes init` or installs it as a global agent skill.
-- The AI agent will automatically:
-  - Scaffold category directories (`applications/full-time/...`, etc.).
-  - Set up `about_me.md` and `tracker.csv`.
-  - Let users select their preferred LaTeX template.
-  - Parse job descriptions and autonomously generate tailored resumes and cover letters.
-- **How to help**: If you have experience building CLI tools, npm/npx packages, or AI agent skills/sidecars, we'd love your architectural and coding contributions!
+### 2. ⚡ Agent Skills & Extensions (`skills/`)
+Expand and refine modular skills under the `skills/` directory:
+- Additional skills (e.g., ATS compliance scanners, interview question generators, cover letter polishers).
+- Enhancement of `skills/resume-tailor/` and `skills/humanizer/`.
 
-### 3. 🤖 Agent Skills & Automation Enhancements
-- Expand skills under the `skills/` directory (e.g., resume tailoring skills, ATS scanner simulators, bullet-point polishers, cover letter customizers).
+### 3. 🤖 Automation, Tooling & CI
 - Automated LaTeX compilation test runners and GitHub Actions CI.
-- LaTeX syntax validators and error recovery workflows for agents.
+- LaTeX syntax validators and error recovery workflows for AI agents.
+- Cross-platform CLI scripts for compiling PDFs locally on Windows, macOS, and Linux.
 
 ### 4. 📚 Documentation & Guides
 - Setup guides for different operating systems (Linux, macOS, Windows) and LaTeX distributions (TeX Live, MiKTeX, MacTeX).

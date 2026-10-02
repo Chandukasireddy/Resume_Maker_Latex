@@ -1,90 +1,166 @@
-# Agentic Resume Framework
+<p align="center">
+  <img src="assets/logo.png" width="160" alt="Agentic Resume Framework Logo">
+</p>
 
-<div align="center">
-  <img src="assets/framework_hero.png?v=3" alt="Agentic Resume Framework Pipeline" width="800">
-</div>
+<h1 align="center">Agentic Resume Framework</h1>
 
-## The Story Behind the Framework
+<p align="center">
+  <em>Zero-hallucination, autonomous LaTeX resume and cover letter pipeline for AI coding agents.</em>
+</p>
 
-After extensive research, testing numerous automation pipelines, and building multiple custom tools from scratch, I developed this framework to solve the ultimate job seeker's bottleneck: **tailoring applications efficiently without sacrificing quality.**
+<p align="center">
+  <img src="https://img.shields.io/badge/skills.sh-resume--tailor-111111?style=flat-square&logo=git" alt="skills.sh">
+  <img src="https://img.shields.io/badge/install-npx%20skills-111111?style=flat-square&logo=npm" alt="npx skills add">
+  <img src="https://img.shields.io/badge/works%20with-Cursor%20%7C%20Claude%20%7C%20Antigravity%20%7C%20Copilot-111111?style=flat-square" alt="Works with agents">
+  <img src="https://img.shields.io/badge/output-LaTeX%20%7C%20PDF-111111?style=flat-square&logo=latex" alt="LaTeX Output">
+  <img src="https://img.shields.io/badge/license-PolyForm%20Noncommercial-111111?style=flat-square" alt="License">
+</p>
 
-This repository represents the **most efficient, fast, and reliable approach** to generating highly tailored, editable LaTeX resumes and cover letters. By providing strict boundaries and a single source of truth, an AI coding agent can autonomously manage your job application pipeline—maintaining formatting, tracking progress, and delivering precise customizations for every role.
-
-### ✨ The Best Part: Ultimate Freedom
-Unlike web-based AI resume builders, this framework is entirely local and file-based:
-- **No AI Model Lock-in:** Use the free tiers of any AI you want (Claude, Gemini, ChatGPT).
-- **IDE Agnostic:** Works perfectly in your familiar environment like Cursor, VSCode (with Copilot), AntiGravity, Kiro, etc. Swap IDEs anytime or run them simultaneously.
-- **Zero Token Limit Issues:** Because the agent navigates a structured file system, it only reads what it needs. No more bloated context windows or hitting token limits.
+<p align="center">
+  <strong>Zero Hallucinations &middot; 100% LaTeX Layout Integrity &middot; 100% Local &amp; Private &middot; No Subscriptions</strong><br>
+  <sub>Autonomously ingests job descriptions, verifies achievements strictly against your <code>about_me.md</code> single source of truth, preserves precision LaTeX layout, and tracks your job hunt—all from your local IDE.</sub>
+</p>
 
 ---
 
-## 🏗️ Architecture & Workflow
+## ⚡ Quick Install
 
-The framework operates on a strict directory structure, routing new jobs into proper categories, safely cloning master templates, and then injecting highly tailored LaTeX content driven by your actual background (`about_me.md`).
+Install directly into your AI coding assistant with one command. `npx skills` fetches **only** the clean skill package—no git clutter, no extra repo files:
+
+```bash
+npx skills add Chandukasireddy/Resume_Maker_Latex
+```
+
+### Install Options
+
+```bash
+# Install globally (available in all projects and workspaces)
+npx skills add Chandukasireddy/Resume_Maker_Latex -g
+
+# Install only the resume-tailor pipeline
+npx skills add Chandukasireddy/Resume_Maker_Latex --skill resume-tailor
+
+# Install the bullet-point humanizer rewriter
+npx skills add Chandukasireddy/Resume_Maker_Latex --skill humanizer
+```
+
+> **Supported Agents:** Works out-of-the-box with **Cursor**, **Claude Code**, **Google Antigravity**, **GitHub Copilot CLI**, and **Windsurf**.
+
+---
+
+## 🎭 Before / After
+
+### Without Skill (Vanilla AI Prompting)
+> You paste a job description. The model invents skills you don't possess, writes robotic buzzwords (*"spearheaded leveraging synergies across cross-functional paradigms"*), breaks LaTeX syntax with unmatched braces, and overflows awkwardly onto a messy second page.
+
+### With Agentic Resume Framework
+```latex
+% Strictly verified against about_me.md with the Action-Verb + Task + Tool + Metric formula:
+\resumeItem{Engineered distributed vector search pipeline using Qdrant \& Python, reducing semantic query latency by 38\% across 4M+ indexed documents.}
+```
+- **Zero Hallucination:** Only real facts from your `about_me.md` are used.
+- **Copywriter Grade:** High-impact power verbs with quantified outcomes.
+- **Flawless Formatting:** Strict 1-page constraints and untouched header structures.
+- **Automated Organization:** Auto-routed into dedicated folders and tracked in `tracker.csv`.
+
+---
+
+## 🪜 How It Works (The Execution Ladder)
+
+Before touching a single character of LaTeX, the agent follows strict procedural rungs:
+
+```text
+1. Route Category       → Determine category (full-time, master-thesis, phd, werk-student, internship)
+2. Source of Truth      → Ingest about_me.md (If it is not in about_me.md, do NOT write it)
+3. Clone Clean Template → Copy master LaTeX files into applications/<category>/<company-role>/
+4. Humanize & Quantify  → Apply Formula: [Strong Action Verb] + [Task] + [Tool] + [Metric]
+5. Enforce Constraints  → Preserve LaTeX macros, spacing, and strict 1-page layout
+6. Generate Metadata    → Create notes.md with role analysis, keywords, and interview Q&A
+7. Update Dashboard     → Append date, role, company, and category to tracker.csv
+```
+
+---
+
+## 🚀 The 3-Step Workflow
 
 ```mermaid
 graph TD
-    JD[Job Description] --> AI[AI Agent]
+    JD[Job Description] --> AI[AI Coding Agent]
     AM[about_me.md \n Source of Truth] -.-> AI
     
-    subgraph Repo Structure
-        MT[master/ \n Templates] -.->|Clone| AF[Job Folder \n applications/...]
-        AI -->|Generate| N[notes.md \n Metadata & Q/A]
-        AI -->|Tailor LaTeX| R[resume.tex]
-        AI -->|Tailor LaTeX| CL[cover-letter.tex]
+    subgraph Local Workspace
+        MT[master/ \n LaTeX Templates] -.->|Safely Clone| AF[applications/<category>/<company-role>/]
+        AI -->|Generate| N[notes.md \n Role Analysis & Q/A]
+        AI -->|Tailor| R[resume.tex]
+        AI -->|Tailor| CL[cover-letter.tex]
         N -.-> AF
         R -.-> AF
         CL -.-> AF
     end
     
-    AI -->|Update| CSV[tracker.csv \n Dashboard Database]
+    AI -->|Log Status| CSV[tracker.csv \n Local Application Dashboard]
+```
+
+### 1. Fill your `about_me.md` once
+Document your real professional history, projects, metrics, and technical skills. This is the **Source of Truth** that prevents the agent from hallucinating.
+
+### 2. Prompt your agent
+Paste any job description directly into your agent:
+> *"I want to apply for the Senior AI Engineer position at Google. Here is the job description: [paste JD]. Use the resume-tailor skill."*
+
+### 3. Compile and submit
+The agent automatically:
+- Creates `applications/full-time/google-senior-ai-engineer/`
+- Generates tailored `resume.tex` and `cover-letter.tex`
+- Writes `notes.md` with interview preparation notes and match scores
+- Logs the application in `tracker.csv`
+
+---
+
+## 🗂️ Workspace Architecture
+
+```text
+Resume_Maker_Latex/
+├── about_me.md              # 🎯 Source of truth (your background)
+├── tracker.csv              # 📊 Application tracking dashboard
+├── master/                  # 📐 Base master templates
+│   ├── master-resume.tex
+│   └── master-cover-letter.tex
+├── applications/            # 📁 Generated applications (auto-organized)
+│   ├── full-time/
+│   │   └── <company-role>/
+│   │       ├── [name]_resume.tex
+│   │       ├── [name]_cover-letter.tex
+│   │       └── notes.md
+│   ├── master-thesis/
+│   ├── phd/
+│   ├── werk-student/
+│   └── internship/
+└── skills/                  # 🤖 Modular Agent Skills (Installable via npx skills)
+    ├── resume-tailor/       # Core tailoring pipeline
+    └── humanizer/           # High-impact copywriter bullet rewriter
 ```
 
 ---
 
-## ⚙️ Setup Instructions
+## 🔒 100% Local & Private
 
-> **New to LaTeX on Windows?** Check out my complete beginner's guide: [How to set up LaTeX on Windows with VSCode](https://medium.com/@chandukasireddy02/how-to-set-up-latex-on-windows-with-vscode-a-complete-beginners-guide-2eeca6b4e3b7)
+Resumes contain your most sensitive Personally Identifiable Information (PII): phone numbers, addresses, salaries, and employment history.
 
-To use this framework with your own AI coding agent (like Claude, Gemini, or ChatGPT within an IDE/Terminal setup), follow these steps:
-
-### 1. Clone or Download this Template
-Start by creating your own private repository using this structure. 
-**Warning:** Ensure you keep this repository private if you include personal contact information (phone numbers, private email addresses) in the master templates.
-
-### 2. Configure Your Master Templates
-Navigate to the `master/` directory and fill out the LaTeX templates:
-- `master-resume.tex`: Build your comprehensive resume. Replace any placeholder contact info with your own.
-- `master-cover-letter.tex`: Update the header blocks and signature with your name and contact details.
-
-### 3. Create Your `about_me.md`
-This is the **Source of Truth** for the AI Agent. Document your entire professional background here:
-- Complete job histories
-- Project details, metrics, and outcomes
-- Technical skills and certifications
-- Education and language proficiency
-*The more detailed this file is, the better the AI can tailor your applications to specific job descriptions without hallucinating.*
-
-### 4. Provide the System Instructions
-The file `.instructions.md` acts as the strict system prompt for the AI agent. It defines the folder structure, editing constraints, and the mandatory step-by-step workflow.
+- **No Cloud Database:** Everything stays on your local machine.
+- **No SaaS Subscriptions:** Stop paying \$20/month for rigid web resume builders.
+- **Model Agnostic:** Works with Claude 3.7 / 3.5 Sonnet, GPT-4o, Gemini 2.5 / 1.5 Pro, DeepSeek, or local LLMs.
 
 ---
 
-## 🚀 How to Use (The Workflow)
+## 📖 Setup & Guides
 
-When you are ready to apply for a job:
-
-1. **Invoke your AI Agent** in the root of the repository.
-2. **Provide the Job Description:**
-   > *"I want to apply for the Senior AI Engineer role at Google. Here is the job description: [Paste JD here]. Please follow the repository instructions."*
-3. **The Agent takes over and will autonomously:**
-   - Categorize the job and create a dedicated folder.
-   - Clone your master templates safely.
-   - Use `about_me.md` to perfectly tailor your LaTeX resume and cover letter for the role.
-   - Generate a `notes.md` with application metadata.
-   - Update the `tracker.csv` database so you can monitor your application status.
-4. **Compile & Submit:** Review the tailored LaTeX files, compile them to PDFs locally or via Overleaf, and submit your application!
+- **New to LaTeX on Windows?** Read the complete beginner's walkthrough: [How to set up LaTeX on Windows with VSCode](https://medium.com/@chandukasireddy02/how-to-set-up-latex-on-windows-with-vscode-a-complete-beginners-guide-2eeca6b4e3b7) by Chandu Kasireddy.
+- **Contributing:** Read our [CONTRIBUTING.md](CONTRIBUTING.md) to add new LaTeX templates or skill enhancements.
+- **Security & Privacy:** Review our [SECURITY.md](SECURITY.md).
 
 ---
 
-*Built with precision for the modern, AI-augmented job seeker.*
+<p align="center">
+  <sub>Licensed under <a href="LICENSE">PolyForm Noncommercial 1.0.0</a> &middot; Built for the modern, AI-augmented job seeker.</sub>
+</p>
