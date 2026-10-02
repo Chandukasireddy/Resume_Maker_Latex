@@ -1,0 +1,117 @@
+% ================================================================================
+% REFERENCE ONLY: FEW-SHOT BENCHMARK
+% Demonstrates how a resume is tailored for a specific role (Google Senior AI Engineer)
+% while preserving exact LaTeX layout, margins, and 1-page constraints.
+% ================================================================================
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{url}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{1.03}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[left=0.5in,right=0.5in,top=0.4in,bottom=0.4in]{geometry}
+\usepackage{tabularx}
+\usepackage[final]{microtype}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*,label=\textbullet,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\newcommand{\entryheader}[4]{%
+  \begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}X r@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabularx}%
+}
+
+\newenvironment{entrybullets}{%
+  \begin{minipage}[t]{0.98\textwidth}
+    \begin{itemize}[leftmargin=*,label=\textbullet,align=left]
+}{%
+    \end{itemize}
+  \end{minipage}
+}
+
+% CV section styling
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[
+  \vspace{-9pt}\rule{\linewidth}{1pt}\vspace{-3pt}
+]
+\titlespacing{\section}{0pt}{8pt}{2pt}
+
+\newcommand{\safehref}[2]{#2}
+\let\href\safehref
+\usepackage{fontawesome5}
+
+\begin{document}
+\pagestyle{empty}
+
+% TITLE
+\begin{tabularx}{\linewidth}{@{}C@{}}
+  \Huge{Jane Doe}\\[8pt]
+  \large{Senior AI Engineer — Generative AI \& Distributed Systems}\\[3pt]
+  \raisebox{-0.05\height}{\faEnvelope} \ jane.doe@example.com \ $|$ \
+  \raisebox{-0.05\height}{\faPhone} \ +49 170 1234567 \ $|$ \
+  \raisebox{-0.05\height}{\faLinkedin} \ linkedin.com/in/janedoe-ai \ $|$ \
+  \raisebox{-0.05\height}{\faGithub} \ github.com/janedoe
+\end{tabularx}
+
+% PROFILE (Length <= 330 characters)
+\section*{PROFILE}
+Senior AI engineer with 4+ years of expertise in Generative AI, RAG pipelines, and distributed ML systems in Python. Proven track record deploying containerized LLM services on Kubernetes, fine-tuning open-source models, and building high-throughput vector search architectures handling millions of daily queries.
+
+% PROFESSIONAL EXPERIENCE (Each bullet <= 150 characters)
+\section*{PROFESSIONAL EXPERIENCE}
+\entryheader{Senior AI Engineer}{Dec 2024 -- Present}{Robert Bosch GmbH}{Stuttgart, Germany}
+\begin{entrybullets}
+  \item Architected multi-agent RAG pipeline using Qdrant \& LangChain, reducing search latency by 42\% across 6M engineering docs.
+  \item Fine-tuned open-source LLMs on proprietary domain data, elevating evaluation benchmark accuracy from 71\% to 89\%.
+  \item Deployed containerized inference services on Kubernetes (EKS), maintaining 99.95\% uptime under 2M daily API requests.
+\end{entrybullets}
+
+\vspace{0.2cm}
+\entryheader{Software Engineer — Machine Learning}{Jul 2022 -- Nov 2024}{TechSolutions Inc.}{Munich, Germany}
+\begin{entrybullets}
+  \item Engineered automated ETL pipelines in Python \& Spark processing 500GB daily telemetry data with zero-downtime reliability.
+  \item Developed real-time anomaly detection microservice with PyTorch \& FastAPI, cutting undetected manufacturing defects by 30\%.
+  \item Mentored 4 junior engineers on clean code architecture, automated test suites, and Docker containerization standards.
+\end{entrybullets}
+
+% PROJECTS
+\section*{KEY PROJECTS}
+\entryheader{Agentic RAG Framework}{Open Source}{Python, LangChain, Qdrant, FastAPI}{github.com/janedoe/agentic-rag}
+\begin{entrybullets}
+  \item Built autonomous multi-step research agent with self-correcting query retrieval, earning 1,200+ GitHub stars.
+  \item Optimized vector indexing pipelines to support sub-50ms query responses across 10M dense vector embeddings.
+\end{entrybullets}
+
+% EDUCATION
+\section*{EDUCATION}
+\entryheader{M.Sc. in Computer Science (Major: AI)}{2020 -- 2022}{Technical University of Munich (TUM)}{Munich, Germany}
+\begin{entrybullets}
+  \item Grade: 1.3 (with distinction); Master Thesis: Benchmarking Distributed Retrieval in Multimodal Large Language Models.
+\end{entrybullets}
+
+\vspace{0.15cm}
+\entryheader{B.Sc. in Software Engineering}{2016 -- 2020}{University of Stuttgart}{Stuttgart, Germany}
+
+% SKILLS
+\section*{TECHNICAL SKILLS}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+  \textbf{AI \& Machine Learning:} & PyTorch, LangChain, LlamaIndex, vLLM, DeepSpeed, HuggingFace, Scikit-Learn \\
+  \textbf{Vector Search \& DBs:} & Qdrant, Milvus, Pinecone, PostgreSQL, Redis, MongoDB, Elasticsearch \\
+  \textbf{Languages \& Backend:} & Python, SQL, TypeScript, C++, Bash, FastAPI, Celery, gRPC, REST APIs \\
+  \textbf{Cloud \& DevOps:} & AWS (Bedrock, EKS, S3), GCP (Vertex AI), Docker, Kubernetes, Terraform, CI/CD \\
+\end{tabularx}
+
+\end{document}

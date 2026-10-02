@@ -1,0 +1,105 @@
+% ================================================================================
+% REFERENCE ONLY: FEW-SHOT BENCHMARK
+% This demonstrates a tailored, 2-paragraph cover letter under 1 page.
+% When creating real user applications, use ONLY the candidate's real about_me.md.
+% ================================================================================
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage[left=0.8in,right=0.8in,top=0.55in,bottom=0.75in]{geometry}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.32em}
+\pagestyle{empty}
+
+\newcommand{\ApplicantName}{}
+\newcommand{\AddressIlineOne}{}
+\newcommand{\AddressIlineTwo}{}
+\newcommand{\AddressIIlineOne}{}
+\newcommand{\AddressIIlineTwo}{}
+\newcommand{\EmailField}{}
+\newcommand{\PhoneField}{}
+\newcommand{\CompanyName}{}
+\newcommand{\DateField}{}
+
+\renewcommand{\author}[1]{\gdef\ApplicantName{#1}}
+\newcommand{\ProvideAdress}[3]{%
+	\ifstrequal{#3}{I}{%
+		\gdef\AddressIlineOne{#1}\gdef\AddressIlineTwo{#2}%
+	}{%
+		\gdef\AddressIIlineOne{#1}\gdef\AddressIIlineTwo{#2}%
+	}%
+}
+\newcommand{\ProvideEmail}[1]{\gdef\EmailField{#1}}
+\newcommand{\ProvidePhone}[2]{\gdef\PhoneField{#1}}
+\newcommand{\ProvideName}[2]{\gdef\CompanyName{#1}}
+\renewcommand{\date}[2]{\gdef\DateField{#1}}
+
+\newcommand{\SignatureLine}[2]{
+	\vspace{0.8em}
+	#1\\[1.1em]
+	\noindent\rule{#2}{0.45pt}\\
+	\ApplicantName
+}
+
+\newlength{\HeaderLeftShift}
+\setlength{\HeaderLeftShift}{\dimexpr1in+\hoffset+\oddsidemargin\relax}
+\newlength{\HeaderTopShift}
+\setlength{\HeaderTopShift}{\dimexpr1in+\voffset+\topmargin+\headheight+\headsep\relax}
+
+\renewcommand{\maketitle}{
+\vspace*{\dimexpr-\HeaderTopShift-\fboxsep-1.0em\relax}
+\noindent\makebox[0pt][l]{\hspace*{-\HeaderLeftShift}\colorbox{gray!10}{%
+\parbox{\dimexpr\paperwidth-2\fboxsep\relax}{%
+\hspace*{\HeaderLeftShift}\parbox{\textwidth}{%
+\vspace*{\HeaderTopShift}
+\begin{center}
+{\fontsize{20}{24}\selectfont\bfseries \ApplicantName}\\[0.8em]
+\href{mailto:\EmailField}{\EmailField} \quad|\quad
+\href{https://linkedin.com/in/janedoe-ai}{LinkedIn} \quad|\quad
+\PhoneField \quad|\quad
+\AddressIlineOne
+\\
+\AddressIlineTwo
+\end{center}
+\vspace{0.25em}
+}}}}
+\vspace{0.45em}
+}
+
+\author{Jane Doe}
+\ProvideAdress{Munich, Germany}{}{I}
+\ProvideEmail{jane.doe@example.com}
+\ProvidePhone{+49 170 1234567}{I}
+
+\ProvideName{Hiring Team}{I}
+\ProvideAdress{Google Germany GmbH}{Erika-Mann-Straße 33, 80636 Munich}{II}
+\date{October 3, 2026}{I}
+
+\begin{document}
+\maketitle
+
+\DateField\\
+\CompanyName\\
+\AddressIIlineOne\\
+\AddressIIlineTwo
+
+\vspace{0.8em}
+\textbf{Subject: Application for Senior AI Engineer — Generative AI \& RAG Systems}
+
+\vspace{0.8em}
+Dear Hiring Team,
+
+I am writing to express my strong enthusiasm for the Senior AI Engineer position at Google in Munich. Having closely followed Google's pioneering research across transformer architectures and multimodal inference engines, I am inspired by your mission to make artificial intelligence universally accessible and impactful. Currently operating as a Senior AI Engineer at Robert Bosch, I specialize in architecting high-throughput Retrieval-Augmented Generation (RAG) systems and deploying enterprise LLM workflows. My background directly aligns with Google Munich's focus on scalable distributed AI services, low-latency semantic search, and resilient infrastructure.
+
+Throughout my tenure at Robert Bosch and TechSolutions, I have focused on closing the gap between cutting-edge AI models and production-grade reliability. At Bosch, I spearheaded the deployment of an enterprise multi-agent RAG pipeline using Qdrant and LangChain, indexing over 6 million engineering documents and cutting semantic query latency by 42\% while handling 2 million daily requests on Kubernetes. Furthermore, my hands-on experience fine-tuning open-source LLMs to achieve an 89\% benchmark accuracy directly equips me to solve the complex retrieval and scaling challenges your engineering team tackles. I would welcome the opportunity to discuss how my technical leadership and production AI expertise can drive immediate value for Google's engineering initiatives.
+
+\SignatureLine{Sincerely,}{2.5in}
+
+\end{document}

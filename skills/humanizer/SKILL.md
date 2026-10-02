@@ -34,10 +34,10 @@ flowchart TD
 ```
 
 1. **Analyze Input:** Identify the core action, tools/technologies used, and the intended outcome.
-2. **Apply Rewriting Formula:** Refer to [bullet-rewriting-formula.md](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/references/bullet-rewriting-formula.md).
-3. **Select High-Impact Verbs:** Pick domain-appropriate power verbs from [action-verbs-list.md](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/references/action-verbs-list.md). Avoid banned weak phrases (*"Responsible for"*, *"Worked on"*, *"Helped with"*).
-4. **Refine Tone & Style:** Enforce rules from [tone-and-voice-guide.md](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/references/tone-and-voice-guide.md) (eliminate AI buzzwords like *leveraged*, *utilizing*, *spearheaded*).
-5. **Cross-Check Examples:** Compare output against domain benchmarks in [before-after-bullets.md](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/examples/before-after-bullets.md) and [before-after-profiles.md](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/examples/before-after-profiles.md).
+2. **Apply Rewriting Formula:** Refer to [bullet-rewriting-formula.md](./references/bullet-rewriting-formula.md).
+3. **Select High-Impact Verbs:** Pick domain-appropriate power verbs from [action-verbs-list.md](./references/action-verbs-list.md). Avoid banned weak phrases (*"Responsible for"*, *"Worked on"*, *"Helped with"*).
+4. **Refine Tone & Style:** Enforce rules from [tone-and-voice-guide.md](./references/tone-and-voice-guide.md) (eliminate AI buzzwords like *leveraged*, *utilizing*, *spearheaded*).
+5. **Cross-Check Examples:** Compare output against domain benchmarks in [before-after-bullets.md](./examples/before-after-bullets.md) and [before-after-profiles.md](./examples/before-after-profiles.md).
 
 ---
 
@@ -55,8 +55,8 @@ $$\text{[Strong Action Verb]} + \text{[Core Task / System Built]} + \text{[Tools
 
 ## Skill File Map
 
-- 📘 [Bullet Rewriting Formula](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/references/bullet-rewriting-formula.md) - The mandatory structural framework for every bullet point.
-- 🗣️ [Tone & Voice Guide](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/references/tone-and-voice-guide.md) - Guidelines for natural, non-robotic phrasing and metric estimates.
-- ⚡ [Action Verbs List](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/references/action-verbs-list.md) - 100+ domain-specific power verbs.
-- 💡 [Before & After Bullets](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/examples/before-after-bullets.md) - 20+ domain-specific bullet transformations.
-- 👤 [Before & After Profiles](file:///c:/Users/prave/Desktop/projects/latex_applications/skills/humanizer/examples/before-after-profiles.md) - Profile summary rewrite examples.
+- 📘 [Bullet Rewriting Formula](./references/bullet-rewriting-formula.md) - The mandatory structural framework for every bullet point.
+- 🗣️ [Tone & Voice Guide](./references/tone-and-voice-guide.md) - Guidelines for natural, non-robotic phrasing and metric estimates.
+- ⚡ [Action Verbs List](./references/action-verbs-list.md) - 100+ domain-specific power verbs.
+- 💡 [Before & After Bullets](./examples/before-after-bullets.md) - 20+ domain-specific bullet transformations.
+- 👤 [Before & After Profiles](./examples/before-after-profiles.md) - Profile summary rewrite examples.
