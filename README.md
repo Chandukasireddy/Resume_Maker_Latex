@@ -25,25 +25,16 @@
 
 ## ⚡ Quick Install
 
-Install directly into your AI coding assistant with one command. `npx skills` fetches **only** the clean skill package—no git clutter, no extra repo files:
+Install the complete skills suite into your AI coding assistant with one command:
 
 ```bash
 npx skills add Chandukasireddy/Resume_Maker_Latex
 ```
 
-### Install Options
-
-```bash
-# Install globally (available in all projects and workspaces)
-npx skills add Chandukasireddy/Resume_Maker_Latex -g
-
-# Install only the resume-tailor pipeline
-npx skills add Chandukasireddy/Resume_Maker_Latex --skill resume-tailor
-
-# Install the bullet-point humanizer rewriter
-npx skills add Chandukasireddy/Resume_Maker_Latex --skill humanizer
-```
-
+> Installs the complete framework (`resume-tailor` pipeline + `humanizer` rewriter) with clean templates and few-shot examples directly into your agent—no git clutter, no unnecessary repo files.
+>
+> **Global Install:** Run with `-g` to make it available across all your projects (`npx skills add Chandukasireddy/Resume_Maker_Latex -g`).
+>
 > **Supported Agents:** Works out-of-the-box with **Cursor**, **Claude Code**, **Google Antigravity**, **GitHub Copilot CLI**, and **Windsurf**.
 
 ---
