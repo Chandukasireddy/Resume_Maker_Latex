@@ -25,7 +25,7 @@
 
 ## ⚡ Quick Install
 
-Install the complete skills suite into your AI coding assistant with one command:
+Install the complete skills suite into your AI coding assistant with one command which auto ignors unnecessary files:
 
 ```bash
 npx skills add Chandukasireddy/Resume_Maker_Latex
