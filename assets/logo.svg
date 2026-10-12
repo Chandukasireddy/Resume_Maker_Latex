@@ -1,70 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%" fill="none">
   <defs>
-    <!-- Sophisticated artistic gradients -->
-    <linearGradient id="primaryFold" x1="40" y1="50" x2="216" y2="206" gradientUnits="userSpaceOnUse">
+    <!-- Main CV Document Gradient -->
+    <linearGradient id="docBg" x1="48" y1="24" x2="208" y2="232" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="60%" stop-color="#4F46E5"/>
-      <stop offset="100%" stop-color="#3730A3"/>
-    </linearGradient>
-    
-    <linearGradient id="soaringWing" x1="90" y1="40" x2="220" y2="140" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#818CF8"/>
-      <stop offset="100%" stop-color="#C084FC"/>
+      <stop offset="55%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#312E81"/>
     </linearGradient>
 
-    <linearGradient id="accentFold" x1="130" y1="120" x2="210" y2="220" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F43F5E"/>
+    <!-- Corner Fold Gradient -->
+    <linearGradient id="cornerFold" x1="156" y1="24" x2="208" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- AI Star Gradient -->
+    <linearGradient id="aiStar" x1="102" y1="162" x2="154" y2="214" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="50%" stop-color="#FDE047"/>
       <stop offset="100%" stop-color="#FB7185"/>
     </linearGradient>
-
-    <linearGradient id="depthShadow" x1="80" y1="120" x2="160" y2="200" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.4"/>
-    </linearGradient>
-
-    <linearGradient id="nibMetallic" x1="100" y1="180" x2="150" y2="230" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E0E7FF"/>
-      <stop offset="100%" stop-color="#A5B4FC"/>
-    </linearGradient>
-
-    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#4F46E5" flood-opacity="0.25"/>
-    </filter>
   </defs>
 
-  <g filter="url(#subtleGlow)">
-    <!-- Base Resume Document Plane (Origami fold) -->
-    <path d="M52 64C52 50.7452 62.7452 40 76 40H144L116 116H52V64Z" 
-          fill="url(#primaryFold)" />
+  <!-- Resume / CV Document Sheet -->
+  <path d="M72 24H156L208 76V208C208 221.255 197.255 232 184 232H72C58.7452 232 48 221.255 48 208V48C48 34.7452 58.7452 24 72 24Z"
+        fill="url(#docBg)"/>
 
-    <!-- Left Spine & Foundation -->
-    <path d="M52 116H116L92 188C88.5 198.5 74 201 67 192L52 173V116Z" 
-          fill="url(#depthShadow)" />
+  <!-- Folded Corner Flap -->
+  <path d="M156 24V56C156 67.0457 164.954 76 176 76H208L156 24Z"
+        fill="url(#cornerFold)"/>
 
-    <!-- Origami Dynamic Soaring Wing (Forward momentum / Career growth) -->
-    <path d="M144 40L214 78C222 82.5 221.5 94.2 213 98L116 142L144 40Z" 
-          fill="url(#soaringWing)" />
+  <!-- Minimalist Top Document Lines -->
+  <line x1="76" y1="54" x2="128" y2="54" stroke="#C7D2FE" stroke-width="6" stroke-linecap="round" stroke-opacity="0.65"/>
+  <line x1="76" y1="70" x2="108" y2="70" stroke="#C7D2FE" stroke-width="6" stroke-linecap="round" stroke-opacity="0.4"/>
 
-    <!-- Under-wing Facet (Dimensional depth) -->
-    <path d="M116 142L213 98L168 168C163 175.5 152.5 178 144.5 173.5L116 158V142Z" 
-          fill="#312E81" />
+  <!-- Center "CV" Monogram -->
+  <path d="M119 105C114 99.5 107.5 97 99.5 97C85.5 97 77 107 77 120C77 133 85.5 143 99.5 143C107.5 143 114 140.5 119 135"
+        stroke="#FFFFFF" stroke-width="11.5" stroke-linecap="round"/>
+  <path d="M137 98L156 142L175 98"
+        stroke="#FFFFFF" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- Coral Fold Accent (The spark / human touch) -->
-    <path d="M116 116L164 138L116 160V116Z" 
-          fill="url(#accentFold)" />
-
-    <!-- Central Precision Drafting Nib / LaTeX Spine -->
-    <path d="M116 102L132 152L116 216L100 152L116 102Z" 
-          fill="url(#nibMetallic)" />
-
-    <!-- Nib slit & breather hole (classic fountain pen / editorial craft symbol) -->
-    <line x1="116" y1="152" x2="116" y2="198" stroke="#312E81" stroke-width="2.5" stroke-linecap="round"/>
-    <circle cx="116" cy="150" r="3.5" fill="#312E81" />
-
-    <!-- LaTeX Typesetting Linework (Editorial resonance) -->
-    <line x1="68" y1="68" x2="104" y2="68" stroke="#A5B4FC" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
-    <line x1="68" y1="82" x2="94" y2="82" stroke="#A5B4FC" stroke-width="3" stroke-linecap="round" stroke-opacity="0.6"/>
-    <line x1="68" y1="96" x2="84" y2="96" stroke="#A5B4FC" stroke-width="3" stroke-linecap="round" stroke-opacity="0.4"/>
-  </g>
+  <!-- Bottom AI Star / Sparkle Symbol -->
+  <path d="M128 160Q134 182 156 188Q134 194 128 216Q122 194 100 188Q122 182 128 160Z"
+        fill="url(#aiStar)"/>
+  <path d="M158 156Q160 163 167 165Q160 167 158 174Q156 167 149 165Q156 163 158 156Z"
+        fill="#67E8F9"/>
 </svg>
