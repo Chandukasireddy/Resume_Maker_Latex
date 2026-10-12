@@ -42,8 +42,7 @@ flowchart TD
   3. Create `notes.md` with metadata, Q&A, and full JD following [sample-notes.md](./examples/sample-notes.md).
   4. Tailor resume LaTeX strictly against `about_me.md` and [latex-rules.md](./references/latex-rules.md) using the [humanizer-formula.md](./references/humanizer-formula.md).
   5. Rewrite cover letter in exactly two paragraphs under one page.
-  6. Append application record to `tracker.csv`.
-
+  6. Prepend the new application record to the top of `tracker.csv`.
 ---
 
 ### Mode C: Humanizer Polish (Ad-hoc)
@@ -69,7 +68,7 @@ All files under `examples/` are **read-only structural benchmarks**:
 - 📐 [LaTeX Rules & Length Limits](./references/latex-rules.md) — Layout preservation and character caps.
 - ✨ [Humanizer Rewriting Formula](./references/humanizer-formula.md) — Action-verb formula and banned AI words.
 - 📋 [About Me Schema](./resources/schema/about_me_schema.md) — Blueprint for parsing resumes.
--  [Sample about_me.md Example](./examples/sample-about_me.md) — Few-shot benchmark of a filled profile.
+- 👤 [Sample about_me.md Example](./examples/sample-about_me.md) — Few-shot benchmark of a filled profile.
 - 📊 [Sample tracker.csv Example](./examples/sample-tracker.csv) — Few-shot benchmark of tracked applications.
 - 📁 [Sample Job Application](./examples/sample-application/google-senior-ai-engineer/) — Full mock application folder containing:
   - [Sample Resume](./examples/sample-application/google-senior-ai-engineer/jane_doe_resume.tex)
