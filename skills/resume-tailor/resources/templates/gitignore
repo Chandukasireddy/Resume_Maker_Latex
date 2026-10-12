@@ -1,0 +1,13 @@
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+temp-tex/
+Forwarded
+.github/
+job-tracker-dashboard.html
+jobs/

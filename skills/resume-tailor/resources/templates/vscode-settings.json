@@ -1,0 +1,44 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "New-Item": true,
+        "Out-Null": true,
+        "Copy-Item": true,
+        "latexmk": true,
+        "Rename-Item": true,
+        "Test-Path": true,
+        "mkdir": true,
+        "cd": true,
+        "ls": true,
+        "dir": true,
+        "git": true,
+        "npm": true,
+        "python": true,
+        "pip": true,
+        "rm": true
+    },
+    "latex-workshop.latex.outDir": "%DIR%",
+    "latex-workshop.latex.auxDir": "%WORKSPACE_FOLDER%/temp-tex",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-auxdir=%WORKSPACE_FOLDER%/temp-tex",
+                "-outdir=%DIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ]
+}

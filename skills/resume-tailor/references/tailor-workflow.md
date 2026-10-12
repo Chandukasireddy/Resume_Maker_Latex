@@ -6,15 +6,16 @@ Follow this runbook when `about_me.md` exists and the user provides a Job Descri
 
 ## 7-Step Autonomous Execution Engine
 
-### Step 1: Ingest & Route Category
-1. Parse the company name, role title, and job requirements from the user's provided Job Description.
-2. Consult [category-routing.md](./category-routing.md) to pick the correct folder:
+### Step 1: Verify Config & Route Category
+1. Ensure `.vscode/settings.json` (from [vscode-settings.json](../resources/templates/vscode-settings.json)), `.gitignore` (from [gitignore](../resources/templates/gitignore)), and `temp-tex/` exist in the workspace root; create any missing ones.
+2. Parse the company name, role title, and job requirements from the user's provided Job Description.
+3. Consult [category-routing.md](./category-routing.md) to pick the correct folder:
    - `applications/full-time/<company-role>/`
    - `applications/master-thesis/<company-role>/`
    - `applications/phd/<company-role>/`
    - `applications/werk-student/<company-role>/`
    - `applications/internship/<company-role>/`
-3. Create the job folder.
+4. Create the job folder.
 
 ### Step 2: Clone Master Templates
 1. Copy **only** these two files from `master/` into the new folder:

@@ -26,10 +26,11 @@ flowchart TD
 - **Runbook:** Read and execute [workspace-init.md](./references/workspace-init.md).
 - **Actions:**
   1. Parse the user's provided resume into `about_me.md` using [about_me_schema.md](./resources/schema/about_me_schema.md).
-  2. Create `applications/` category folders (full-time, master-thesis, phd, werk-student, internship).
+  2. Verify and create `applications/` category folders (full-time, master-thesis, phd, werk-student, internship) and `temp-tex/`.
   3. Create `master/` and copy clean LaTeX templates from [resources/templates/](./resources/templates/).
-  4. Initialize `tracker.csv` with standard column headers.
-  5. Confirm setup is complete and invite the user to paste their first Job Description.
+  4. Verify and create `.vscode/settings.json` (from [vscode-settings.json](./resources/templates/vscode-settings.json)) and `.gitignore` (from [gitignore](./resources/templates/gitignore)) for clean LaTeX compilation.
+  5. Initialize `tracker.csv` with standard column headers if missing.
+  6. Confirm setup is complete and invite the user to paste their first Job Description.
 
 ---
 
@@ -37,7 +38,7 @@ flowchart TD
 *Trigger:* `about_me.md` already exists and user provides a Job Description (e.g., *"Apply for Senior AI Engineer at BMW: [JD]"*).
 - **Runbook:** Read and execute [tailor-workflow.md](./references/tailor-workflow.md).
 - **Actions:**
-  1. Route to category folder via [category-routing.md](./references/category-routing.md) (`applications/<category>/<company-role>/`).
+  1. Verify `.vscode/settings.json`, `.gitignore`, and `temp-tex/` exist (create from [resources/templates/](./resources/templates/) if missing), then route to category folder via [category-routing.md](./references/category-routing.md) (`applications/<category>/<company-role>/`).
   2. Clone only `master/master-resume.tex` and `master/master-cover-letter.tex` into the job folder.
   3. Create `notes.md` with metadata, Q&A, and full JD following [sample-notes.md](./examples/sample-notes.md).
   4. Tailor resume LaTeX strictly against `about_me.md` and [latex-rules.md](./references/latex-rules.md) using the [humanizer-formula.md](./references/humanizer-formula.md).
@@ -68,6 +69,8 @@ All files under `examples/` are **read-only structural benchmarks**:
 - 📐 [LaTeX Rules & Length Limits](./references/latex-rules.md) — Layout preservation and character caps.
 - ✨ [Humanizer Rewriting Formula](./references/humanizer-formula.md) — Action-verb formula and banned AI words.
 - 📋 [About Me Schema](./resources/schema/about_me_schema.md) — Blueprint for parsing resumes.
+- ⚙️ [VS Code LaTeX Settings Template](./resources/templates/vscode-settings.json) — Routes auxiliary build files to `temp-tex/`.
+- 🙈 [Gitignore Template](./resources/templates/gitignore) — Ignores PDFs and LaTeX build artifacts.
 - 👤 [Sample about_me.md Example](./examples/sample-about_me.md) — Few-shot benchmark of a filled profile.
 - 📊 [Sample tracker.csv Example](./examples/sample-tracker.csv) — Few-shot benchmark of tracked applications.
 - 📁 [Sample Job Application](./examples/sample-application/google-senior-ai-engineer/) — Full mock application folder containing:
