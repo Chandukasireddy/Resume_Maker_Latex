@@ -11,7 +11,7 @@
 **Location:** Berlin, Germany (Hybrid)
 
 **Bosch Role Statement (for all documents):**  
-Currently working at Robert Bosch on Gen AI and AI workflows, including RAG pipelines and agentic workflows.
+Currently working at [Company Name 1] on Gen AI and AI workflows, including RAG pipelines and agentic workflows.
 
 **JD Keywords & Technologies to highlight:**
 - Knowledge Graph platform design and scaling
@@ -30,13 +30,13 @@ Currently working at Robert Bosch on Gen AI and AI workflows, including RAG pipe
 ## Questionnaire / Application Details
 
 **Potential form question: Current challenge solved at Bosch**  
-At Robert Bosch, I worked on improving quality assurance throughput for PLM workflows where manual validation created delays and inconsistent test depth. I designed and deployed an agentic RAG workflow that combined context retrieval, LLM orchestration, and automation logic, which reduced repetitive manual effort and improved response consistency. The key challenge was balancing retrieval quality, latency, and reliability across real enterprise content. I addressed this by iterating on retrieval pipelines, prompt structures, and evaluation checkpoints so outputs remained actionable for engineering teams.
+At [Company Name 1], I worked on improving quality assurance throughput for PLM workflows where manual validation created delays and inconsistent test depth. I designed and deployed an agentic RAG workflow that combined context retrieval, LLM orchestration, and automation logic, which reduced repetitive manual effort and improved response consistency. The key challenge was balancing retrieval quality, latency, and reliability across real enterprise content. I addressed this by iterating on retrieval pipelines, prompt structures, and evaluation checkpoints so outputs remained actionable for engineering teams.
 
 **Salary expectations (if asked):**  
 I am open and flexible, and I would be happy to align with SAP's internal compensation structure for this role and location.
 
-**LinkedIn:** https://www.linkedin.com/in/chandukasireddy/  
-**Portfolio:** https://chandu.graspins.com/
+**LinkedIn:** [Your LinkedIn URL]  
+**Portfolio:** [Your Portfolio URL]
 
 ## Job Description
 
@@ -151,17 +151,17 @@ Dear SAP Hiring Team,
 
 I am writing to apply for the Lead Developer - Knowledge Graph & Semantics (f/m/d) role in Berlin (Requisition ID 449686).
 
-I am currently working at Robert Bosch on Gen AI and AI workflows, including RAG pipelines and agentic workflows, where I design production-ready AI systems that connect enterprise content with reliable decision support. In this role, I build retrieval pipelines, LLM orchestration workflows, and automation services using Python and modern AI tooling. I am excited by the opportunity to bring this experience to SAP's Knowledge Graph CoE and contribute to ontology-to-graph pipelines, entity extraction, and hybrid graph-vector retrieval for trusted AI use cases at scale.
+I am currently working at [Company Name 1] on Gen AI and AI workflows, including RAG pipelines and agentic workflows, where I design production-ready AI systems that connect enterprise content with reliable decision support. In this role, I build retrieval pipelines, LLM orchestration workflows, and automation services using Python and modern AI tooling. I am excited by the opportunity to bring this experience to SAP's Knowledge Graph CoE and contribute to ontology-to-graph pipelines, entity extraction, and hybrid graph-vector retrieval for trusted AI use cases at scale.
 
 Beyond implementation, I value engineering quality and team collaboration. I consistently apply testing, documentation, and CI/CD-oriented delivery practices, and I enjoy partnering with cross-functional stakeholders to shape robust architecture decisions. I would welcome the opportunity to contribute to SAP's CPIT mission and help scale semantic AI capabilities across teams.
 
 Thank you for your consideration. I have attached my CV and cover letter and would be glad to discuss my fit in more detail.
 
 Kind regards,  
-Chandrakiran Reddy Kasireddy  
-+49 176 58483995  
-chandukasireddy02@gmail.com  
-LinkedIn: https://www.linkedin.com/in/chandukasireddy/
+[Your Name]  
+[Your Phone]  
+[Your Email]  
+LinkedIn: [Your LinkedIn URL]
 
 ## Next Steps
 

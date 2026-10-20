@@ -59,5 +59,5 @@ Would you like to actively help shape the mobility of the future? Then you are i
 - Resume sections edited: Role line, Profile, Professional Experience, Skills
 - Resume constraints followed: layout unchanged, section scope unchanged, profile ≤330 chars, each bullet ≤150 chars
 - Cover letter constraints followed: 2 paragraphs, under 1 page, human tone, no "--" symbols
-- Experience framing: Student role — stated as Master's student and currently working as Werkstudent at Robert Bosch
+- Experience framing: Student role — stated as Master's student and currently working as Werkstudent at [Company Name 1]
 - Research summary: Volkswagen Group Innovation, UX Concepts and Solutions team, Human-AI Interaction in vehicle context, Wolfsburg headquarters

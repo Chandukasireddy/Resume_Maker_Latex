@@ -71,17 +71,17 @@ Intern in Web \& AI (m/f/d)
 
 Dear Huawei Hilbert Research Center Hiring Team,
 
-I am writing to apply for the Intern - Web \& AI position in Dresden. I am a Master's student in Artificial Intelligence at Brandenburg University of Technology, Cottbus, and currently working as a Werkstudent at Robert Bosch on Gen AI and AI workflows, including RAG pipelines and agentic workflows.
+I am writing to apply for the Intern - Web \& AI position in Dresden. I am a Master's student in Artificial Intelligence at [University Name 1], Cottbus, and currently working as a Werkstudent at [Company Name 1] on Gen AI and AI workflows, including RAG pipelines and agentic workflows.
 
 In my current role, I develop practical LLM-based systems and agent coordination pipelines using LangChain and Agno, with focus on reliability and production value. I am especially motivated by your Fields Lab mission at the intersection of web technologies, systems engineering, and AI research, and I would be excited to contribute to initiatives such as web-scale AI agents, retrieval-augmented systems, and intelligent automation frameworks.
 
 Please find my CV and cover letter attached. Thank you for your time and consideration. I would be glad to discuss my fit for the role.
 
 Kind regards,  
-Chandrakiran Reddy Kasireddy  
-chandukasireddy02@gmail.com  
-+49 176 58483995  
-LinkedIn: https://www.linkedin.com/in/chandukasireddy/
+[Your Name]  
+[Your Email]  
+[Your Phone]  
+LinkedIn: [Your LinkedIn URL]
 
 ## Generation Details
 

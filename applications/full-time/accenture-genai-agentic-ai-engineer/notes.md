@@ -44,5 +44,5 @@ Actively shape innovation and further development.
 - Resume sections edited: Role line, Profile, Professional Experience, Skills
 - Resume constraints followed: layout unchanged, section scope unchanged, profile ≤330 chars, bullets ≤150 chars
 - Cover letter constraints followed: 2 paragraphs, under 1 page, human tone, no "--" symbols
-- Experience framing: Full-time role — explicitly stated currently working at Robert Bosch on Gen AI and AI workflows including RAG pipelines and agentic workflows
+- Experience framing: Full-time role — explicitly stated currently working at [Company Name 1] on Gen AI and AI workflows including RAG pipelines and agentic workflows
 - Research notes: Accenture Center for Advanced AI, Germany-based multi-location roles, focus on industrialization of GenAI/Agentic AI solutions, cloud-native delivery, CI/CD, clean code practices
