@@ -150,7 +150,7 @@ Resumes contain your most sensitive Personally Identifiable Information (PII): p
 
 ## 📖 Setup & Guides
 
-- **New to LaTeX on Windows?** Read the complete beginner's walkthrough: [How to set up LaTeX on Windows with VSCode](https://medium.com/@chandukasireddy02/how-to-set-up-latex-on-windows-with-vscode-a-complete-beginners-guide-2eeca6b4e3b7) by Chandu Kasireddy.
+- **New to LaTeX on Windows?** Read the complete beginner's walkthrough: [How to set up LaTeX on Windows with VSCode](https://medium.com/@chandukasireddy02/how-to-set-up-latex-on-windows-with-vscode-a-complete-beginners-guide-2eeca6b4e3b7).
 - **Contributing:** Read our [CONTRIBUTING.md](CONTRIBUTING.md) to add new LaTeX templates or skill enhancements.
 - **Security & Privacy:** Review our [SECURITY.md](SECURITY.md).
 
