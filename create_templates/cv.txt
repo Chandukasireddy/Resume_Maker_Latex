@@ -1,0 +1,185 @@
+%----------------------------------------------------------------------------------------
+% CREATIVE SINGLE-PAGE CURRICULUM VITAE TEMPLATE WITH PHOTO
+% Optimized for High ATS / ADS Score & Modern Executive Presentation
+%----------------------------------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
+
+% Page Geometry & Margins (strictly calibrated for 1 page)
+\usepackage[left=0.48in, right=0.48in, top=0.36in, bottom=0.36in]{geometry}
+
+% Character Encoding & Modern Clean Typography
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+\usepackage{amssymb}
+
+% Color Definitions (Executive Modern Tech Palette)
+\usepackage[dvipsnames]{xcolor}
+\definecolor{PrimaryColor}{HTML}{0F2A4A}    % Deep Corporate Navy
+\definecolor{SecondaryColor}{HTML}{1D63B8}  % Modern Vibrant Tech Blue
+\definecolor{DarkText}{HTML}{1F2937}        % High-contrast Charcoal
+\definecolor{MutedText}{HTML}{4B5563}       % Professional Slate Grey
+\definecolor{LineColor}{HTML}{CBD5E1}        % Divider Line Slate
+\definecolor{SkillBg}{HTML}{F1F5F9}         % Subtle Pill Background
+
+% Packages for Layout, Icons & Graphics
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\hypersetup{
+  hidelinks,
+  pdfauthor={[Your Name]},
+  pdftitle={Curriculum Vitae - [Your Name]},
+  pdfsubject={Professional Resume Template},
+  pdfkeywords={Resume, CV, Template, LaTeX, Professional}
+}
+
+% Typography & Spacing Defaults
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.04}
+\color{DarkText}
+
+% Clean, ATS-Friendly Itemize
+\setlist[itemize]{
+  leftmargin=1.15em,
+  label=\textcolor{SecondaryColor}{\small\textbullet},
+  itemsep=1.5pt,
+  topsep=1.5pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% Section Header Format (Bold uppercase with stylish horizontal accent bar)
+\titleformat{\section}{\color{PrimaryColor}\fontsize{10pt}{12pt}\bfseries\raggedright}{}{0em}{}[\vspace{-5pt}\textcolor{PrimaryColor}{\rule{\linewidth}{1.2pt}}\vspace{-2pt}]
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+% Experience & Education Header Macros
+\newcommand{\experienceheader}[4]{%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+    \textbf{\textcolor{PrimaryColor}{#1}} \ $|$ \ \textbf{#2} & \textcolor{MutedText}{\small\textbf{#3}} \\
+    \textit{\small\textcolor{SecondaryColor}{#4}} & \\
+  \end{tabularx}%
+  \vspace{-3pt}
+}
+
+\newcommand{\educationheader}[4]{%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+    \textbf{\textcolor{PrimaryColor}{#1}} & \textcolor{MutedText}{\small\textbf{#2}} \\
+    \textit{\small#3} & \textit{\small\textcolor{MutedText}{#4}} \\
+  \end{tabularx}%
+  \vspace{-2pt}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+% HEADER: NAME, TITLE, CONTACT & CIRCULAR PHOTO
+%----------------------------------------------------------------------------------------
+\begin{minipage}[c]{0.78\linewidth}
+  {\fontsize{21pt}{23pt}\bfseries\color{PrimaryColor} [Your Full Name]}\\[2.5pt]
+  {\fontsize{10pt}{12pt}\bfseries\color{SecondaryColor} [Your Professional Title] \ $|$ \ [Core Specialization \& Domain]}\\[5pt]
+  \small
+  \begin{tabular}{@{}ll@{}}
+    \textcolor{SecondaryColor}{\faEnvelope} \ \href{mailto:your.email@example.com}{your.email@example.com} & 
+    \textcolor{SecondaryColor}{\faPhone*} \ +1 (555) 012-3456 \\[2pt]
+    \textcolor{SecondaryColor}{\faLinkedin} \ \href{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile} & 
+    \textcolor{SecondaryColor}{\faGlobe} \ \href{https://yourportfolio.com}{yourportfolio.com} \\[2pt]
+    \textcolor{SecondaryColor}{\faMapMarker*} \ [City, Country] &
+    \textcolor{SecondaryColor}{\faAward} \ [Top Professional Certification / Credential]
+  \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.20\linewidth}
+  \raggedleft
+  \begin{tikzpicture}
+    \begin{scope}
+      \clip (0,0) circle (1.12cm);
+      \node at (0,0) {\includegraphics[width=2.3cm]{profile_photo.png}};
+    \end{scope}
+    \draw[color=PrimaryColor, line width=1.5pt] (0,0) circle (1.12cm);
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{3pt}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+\section*{EXECUTIVE SUMMARY}
+Results-driven [Target Role / Profession] with proven experience architecting, developing, and deploying high-performance [Technical Domain / Solutions]. Demonstrated expertise in building production systems using [Key Technologies / Frameworks], driving quantifiable efficiency gains and robust performance. Adept in cross-functional collaboration, technical leadership, and delivering scalable enterprise solutions.
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section*{PROFESSIONAL EXPERIENCE}
+
+\experienceheader{[Target Employer / Company 1]}{[City, Country]}{[Month Year] -- Present}{[Senior Role / Job Title 1]}
+\begin{itemize}
+  \item Architected and deployed enterprise \textbf{[System/Platform]} using \textbf{[Framework 1]} and \textbf{[Framework 2]}, reducing operational turnaround time by \textbf{40\%}.
+  \item Orchestrated multi-tier service pipelines (\textbf{[Technology A, Technology B, Technology C]}) to automate mission-critical workflows with deterministic reliability.
+  \item Built containerized microservices (\textbf{Docker, FastAPI}) and automated CI/CD pipelines, integrating continuous evaluation into production environments.
+\end{itemize}
+
+\vspace{2pt}
+\experienceheader{[Target Employer / Company 2]}{[City, Country]}{[Month Year] -- [Month Year]}{[Lead Engineer / Job Title 2]}
+\begin{itemize}
+  \item Founded and led technical deliverables for digital solutions, delivering custom automation agents, analytics dashboards, and cloud applications.
+  \item Deployed domain-specific automated workflows and ETL data pipelines, accelerating client processing velocity by \textbf{60\%}.
+  \item Managed product development lifecycle, aligning system architecture, database optimization, and cloud infrastructure.
+\end{itemize}
+
+\vspace{2pt}
+\experienceheader{[Target Employer / Company 3]}{[City, Country]}{[Month Year] -- [Month Year]}{[Associate Engineer / Job Title 3]}
+\begin{itemize}
+  \item Developed a real-time computer vision and analytics engine using \textbf{Deep Learning} and \textbf{Cloud Services}, achieving \textbf{92\%} classification accuracy.
+  \item Engineered high-throughput database pipelines (\textbf{SQL, REST APIs}), decreasing query response latency by \textbf{35\%}.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\section*{EDUCATION}
+
+\educationheader{[University / Institution Name 1]}{[Graduation Year / Present]}{Master of Science in [Field of Study / Artificial Intelligence]}{[City, Country]}
+\vspace{-1pt}
+{\footnotesize \textcolor{DarkText}{\textbf{Specialization:} [Core Specialization Area 1, Area 2, Area 3, Area 4]}}
+
+\vspace{3pt}
+\educationheader{[University / Institution Name 2]}{[Graduation Year]}{Bachelor of Technology / Science in [Field of Study / Computer Science]}{[City, Country]}
+\vspace{-1pt}
+{\footnotesize \textcolor{DarkText}{\textbf{Honors:} [Academic Distinction / Honors / Outstanding Student Award]}}
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section*{TECHNICAL SKILLS}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\color{PrimaryColor}}l @{\hspace{0.8em}}X@{}}
+  Core Domain Skills: & [Specialized Skill 1], [Specialized Skill 2], [Specialized Skill 3], [Framework 1], [Framework 2], [Algorithms], [Modeling] \\
+  Languages \& Cloud: & Python, C++, SQL, Docker, FastAPI, Linux, Git, CI/CD, Cloud Platforms (GCP, AWS, Azure) \\
+  Databases \& Tools: & PostgreSQL, Microsoft SQL Server, Vector Databases, RESTful APIs, Redis, Business Intelligence, Data Pipelines \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% PUBLICATIONS, HONORS & LEADERSHIP
+%----------------------------------------------------------------------------------------
+\section*{PUBLICATIONS, HONORS \& LEADERSHIP}
+\small
+\begin{itemize}
+  \item \textbf{Peer-Reviewed Publication:} \textit{"[Title of Research Paper or Publication]"}, [Conference or Journal Proceedings, Year].
+  \item \textbf{Honors \& Awards:} Winner of [Industry Challenge / Hackathon / Academic Award, Year] for [brief description of achievement].
+  \item \textbf{Leadership \& Community:} Former \textbf{[Leadership Role]} (directed [X]+ member organization); Active technical society representative.
+  \item \textbf{Languages:} \textbf{English} (Fluent / Professional), \textbf{[Language 2]} (Intermediate), \textbf{[Language 3]} (Native).
+\end{itemize}
+
+\end{document}
